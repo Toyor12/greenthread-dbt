@@ -3,3 +3,4 @@ deployment/
 *.json
 CLAUDE.md
 commands-scratchpad.txt
+*.zip
