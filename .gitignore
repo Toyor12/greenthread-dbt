@@ -4,3 +4,4 @@ deployment/
 CLAUDE.md
 commands-scratchpad.txt
 *.zip
+venv/
