@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: Customer dimension with lifetime value and segmentation
+    columns:
+      - name: customer_id
+        description: Unique identifier for each customer
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_segment
+        description: Customer value segmentation (VIP, High Value, Standard)
+        tests:
+          - accepted_values:
+              values: ['VIP', 'High Value', 'Standard']
+
+      - name: lifetime_value
+        description: Total revenue from completed orders
+        tests:
+          - not_null
+
+  - name: fct_orders
+    description: Order facts including revenue leak flag
+    columns:
+      - name: order_id
+        description: Unique identifier for each order
+        tests:
+          - unique
+          - not_null
+
+      - name: is_revenue_leak
+        description: Flag for completed orders with $0 amount
+        tests:
+          - not_null
