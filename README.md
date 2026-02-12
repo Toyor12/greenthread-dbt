@@ -1,5 +1,10 @@
 # GreenThread Analytics Suite (dbt + PostgreSQL)
 
+## dbt Lineage (DAG)
+
+![dbt DAG](docs/dag.png)
+
+
 ## What this is
 A small analytics engineering project using **dbt**, **PostgreSQL**, and **Docker**.  
 It turns raw e-commerce data into clean models for reporting.
