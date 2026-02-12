@@ -29,3 +29,5 @@ docker-compose up -d postgres
 docker-compose run --rm dbt run --project-dir analytics_project --profiles-dir .
 docker-compose run --rm dbt test --project-dir analytics_project --profiles-dir .
 
+
+If 8080 is busy, run with -p 8081:8080 and open http://localhost:8081
