@@ -1,5 +1,7 @@
 # GreenThread Analytics Suite (dbt + PostgreSQL)
 
+![Pipeline CI](https://github.com/Toyor12/greenthread-dbt/actions/workflows/ci.yml/badge.svg)
+
 ## dbt Lineage (DAG)
 
 ![dbt DAG](docs/dag.png)

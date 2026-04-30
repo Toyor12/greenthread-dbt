@@ -1,0 +1,25 @@
+name: Pipeline CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install dbt
+        run: pip install dbt-postgres
+      - name: Check project structure
+        run: |
+          test -f README.md
+          test -d analytics_project
+          test -d docs
+          echo "All files present"
